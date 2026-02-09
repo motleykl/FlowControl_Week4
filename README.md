@@ -2,6 +2,8 @@
 
 ## If...Else
 
+much easier to use in script file 
+
 One of the other very important programming concepts is known as "flow control". Basically, this just means doing different things depending on current conditions. There are several ways to accomplish flow control, but probably the most common is the `if...else` statement, which looks like this:
 
 ```
@@ -14,7 +16,8 @@ fi
 ```
 
 There are lots of different ways to compare values, depending on what type of values you're working with. Here is a page that lists several options: [Bash comparison operators](http://tldp.org/LDP/abs/html/comparison-ops.html). Here's one example:
-
+this syntax only used in bash 
+[]=sensitive to spaces 
 ```
 # Defining value of numeric variable
 a=2
@@ -27,6 +30,9 @@ else
   echo "$a is NOT less than 3."
 fi
 ```
+want to indent when doing different commands(?)- the different parts of if then
+dont have to use else
+fi = end (its if backwards
 
 Here's an example of combining backticks, command-line arguments, and an if...else statement to write a script that tests if a command-line argument has a certain number of characters.
 
@@ -73,6 +79,7 @@ Practice Exercise 1 (If...Else)
 ### If...Elif...Else
 
 Sometimes you may want to evaluate a series of conditions consecutively. In this case, you can use a variation on an `if...else` statement that has an extra `else if` in the middle. In these cases, the `else if` is abbreviated as `elif` and the structure could look something like this
+inside (()) can use any normal math symbol and does not care about spaces
 
 ```
 if (( $1 < 2 ))
@@ -115,6 +122,13 @@ do
   echo $num
 done
 ```
+parts that are always the same:
+for <variable name> in <whats in the variable>
+do
+  echo <variable name>
+done
+
+can do thousands of files at once
 
 Let's break this down. First, we've defined a new variabled named `num`. This variable can be named anything you want. In this case, `num` will iteratively take the value of anything included in the list that follows `in`. During each iteration, the code in between `do` and `done` will be executed. In this case, we will simply print out each of the values our variable takes, one after the other. Later, we will use `for` loops that have a whole series of commands inside the loop.
 
@@ -145,6 +159,7 @@ When written this way, the `for` loop statement has a structure like this
 ```
 for (( <START_VALUE> ; <STOP_CONDITION> ; <LOOP_UPDATE> ))
 ```
+make sure dont get sruck in infinite lop
 
 The variable is initialized to the start value, updated according to the loop update, and continues until the stop condition is no longer true. The loop update (`num++`) here adds `1` to `num` each time the loop iterates. NOTE: You _don't_ precede variables with `$` inside double parentheses.
 
