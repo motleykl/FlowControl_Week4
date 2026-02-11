@@ -32,7 +32,8 @@ fi
 ```
 want to indent when doing different commands(?)- the different parts of if then
 dont have to use else
-fi = end (its if backwards
+fi = end (its if backwards)
+bullion - true or false - the results are this
 
 Here's an example of combining backticks, command-line arguments, and an if...else statement to write a script that tests if a command-line argument has a certain number of characters.
 
