@@ -117,6 +117,8 @@ fi
 
 One of the most common reasons to write a script is to automate something that is, at a minimum, very tedious to do manually and, at worst, completely impossible otherwise. A versatile way to incorporate repitition into a script is to use a `for` loop. `for` loops in bash have the following structure:
 
+have predetermined number or condition
+
 ```
 for num in 1 two 3 FOUR
 do
