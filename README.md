@@ -113,6 +113,8 @@ else
 fi
 ```
 
+DONT NEED ELSE IF DONT WANT IT TO DO ANYTHING
+
 ## For Loops
 
 One of the most common reasons to write a script is to automate something that is, at a minimum, very tedious to do manually and, at worst, completely impossible otherwise. A versatile way to incorporate repitition into a script is to use a `for` loop. `for` loops in bash have the following structure:
@@ -147,6 +149,35 @@ Write a for loop inside a script that follows these steps:
 
 HINT: Remember the modulo (%) operator!!
 ```
+#! /bin/bash
+
+sum=0
+
+for i in $@
+do
+   sum=$((sum+i))
+done 
+echo "the total is $sum"
+
+
+! /bin/bash
+
+sum=0
+
+for i in $@
+do
+   if ((i % 2 == 0))       ###to test equality use == ; = assigns value
+   then
+     sum=$((sum+i))
+   fi
+done
+echo "the total is $sum"
+
+sum=0 when adding
+sum=1 when multiplying
+= is the assignment operator; look on right hand side first then reassigns 
+if have echo w/in loop, it will print it out each time 
+
 
 Double parentheses notation can also be used to write a `for` loop in a way that doesn't require you to write out every unique element in the list:
 
